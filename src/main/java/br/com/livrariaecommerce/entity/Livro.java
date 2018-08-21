@@ -15,5 +15,8 @@ public class Livro {
 	@Getter
 	@Setter
 	private String descricao;
+	@Getter
+	@Setter
+	private Integer paginas;
 
 }
