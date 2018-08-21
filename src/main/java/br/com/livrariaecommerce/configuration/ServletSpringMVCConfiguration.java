@@ -11,12 +11,12 @@ public class ServletSpringMVCConfiguration extends AbstractAnnotationConfigDispa
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return null;
+		return new Class[] { AppWebConfiguration.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		return null;
+		return new String[] { "/" };
 	}
 
 }
