@@ -8,9 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import br.com.livrariaecommerce.controller.HomeController;
+import br.com.livrariaecommerce.dao.LivroDAO;
 
 @EnableWebMvc
-@ComponentScan(basePackageClasses = { HomeController.class })
+@ComponentScan(basePackageClasses = { HomeController.class, LivroDAO.class })
 public class AppWebConfiguration extends WebMvcConfigurationSupport {
 
 	@Bean
