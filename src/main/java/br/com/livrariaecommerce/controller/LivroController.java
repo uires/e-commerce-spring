@@ -22,9 +22,7 @@ public class LivroController {
 
 	@RequestMapping("cadastrarLivro")
 	public ModelAndView e(@ModelAttribute("livro") Livro livro) {
-		System.out.println(livro.getDescricao());
-		System.out.println(livro.getTituloDoLivro());
-		System.out.println(livro.getPaginas().intValue());
+		repository.save(livro);
 		return cadastroLivroMapping();
 	}
 }
