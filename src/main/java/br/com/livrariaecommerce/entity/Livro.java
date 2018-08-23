@@ -38,5 +38,7 @@ public class Livro {
 	@Column(name = "preco", nullable = false)
 	@NotNull(message = "Esse campo é obrigatório")
 	private Float preco;
+	@Column(name = "url", length = 500)
+	private String urlImagemLivro;
 
 }
