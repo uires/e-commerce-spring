@@ -7,7 +7,7 @@
 		.imagem-bg {
 			background-attachment: fixed;
 			height: 565px;
-			background-image: url("https://pixabay.com/get/eb34b10e2cf3043ed1534705fb0938c9bd22ffd41cb2144191f3c278ae/rose-2101475_1920.jpg");
+			background-image: url("https://uploaddeimagens.com.br/images/001/574/538/original/rose-2101475_1920.jpg?1535048725");
 			background-repeat: no-repeat;
 			background-position: center;
 			margin-bottom: 55px;
