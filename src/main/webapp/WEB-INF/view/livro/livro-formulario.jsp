@@ -39,10 +39,18 @@
 						<formSpring:input path="preco" cssClass="form-control preco-input" /><br />
 						<formSpring:errors path="preco" cssClass="font-italic" cssStyle="color:red;" />
 					</div>
+					<!-- Url Input -->
+					<div class="form-group">
+						<label>URL Imagem do produto</label><br />
+						<formSpring:textarea path="urlImagemLivro" cols="30" rows="10" maxlength="500" 
+							cssClass="form-control url-input"/><br />
+						<formSpring:errors path="urlImagemLivro" cssClass="font-italic" cssStyle="color:red;" />
+					</div>
 					<!-- Descrição Input -->
 					<div class="form-group">
 						<label>Descrição</label><br />
-						<formSpring:textarea path="descricao" cols="30" rows="10" maxlength="255" cssClass="form-control descricao-input"/><br />
+						<formSpring:textarea path="descricao" cols="30" rows="10" maxlength="255" 
+							cssClass="form-control descricao-input"/><br />
 						<formSpring:errors path="descricao" cssClass="font-italic" cssStyle="color:red;" />
 					</div><br />
 					<button type="submit" class="btn btn-primary active btn-lg" >Cadastrar</button>
@@ -56,6 +64,7 @@
 				document.querySelector(".titulo-input").value = '';
 				document.querySelector(".pagina-input").value = '';
 				document.querySelector(".preco-input").value = '';
+				document.querySelector(".url-input").value = '';
 				document.querySelector(".descricao-input").value = '';
 			}
 			

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
@@ -133,12 +134,12 @@
   	</a>
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href='<c:url value="/listaLivros" />'>Home</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Livros</a></li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0" method="POST">
 			<input class="form-control mr-sm-2" type="search" placeholder="Buscar Livros" />
-			<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+			<button class="btn btn-primary btn-sm" type="submit">Buscar</button>
 		</form>
 	</div>
 </nav>
