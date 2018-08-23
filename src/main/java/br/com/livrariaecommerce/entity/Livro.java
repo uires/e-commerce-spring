@@ -24,7 +24,7 @@ public class Livro {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@Column(name = "titulo", nullable = false, length = 155)
+	@Column(name = "titulo", nullable = false, length = 155, unique = true)
 	@NotNull(message = "Esse campo é obrigatório")
 	@Size(min = 5, max = 155, message = "Esse campo deve ter no mínino 5 caracteres e no máximo 155")
 	private String tituloDoLivro;
@@ -35,5 +35,8 @@ public class Livro {
 	@Column(name = "paginas", nullable = false)
 	@NotNull(message = "Esse campo é obrigatório")
 	private Integer paginas;
+	@Column(name = "preco", nullable = false)
+	@NotNull(message = "Esse campo é obrigatório")
+	private Float preco;
 
 }
