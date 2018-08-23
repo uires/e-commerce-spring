@@ -17,7 +17,8 @@ public class JPAConfiguration {
 
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManager() {
-		LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
+		LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean 
+			= new LocalContainerEntityManagerFactoryBean();
 		JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
 		localContainerEntityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter);
 
@@ -31,6 +32,7 @@ public class JPAConfiguration {
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 		properties.setProperty("hibernate.show_sql", "true");
+		properties.setProperty("hibernate.format_sql", "true");
 		properties.setProperty("hibernate.hbm2ddl.auto", "update");
 		localContainerEntityManagerFactoryBean.setJpaProperties(properties);
 
