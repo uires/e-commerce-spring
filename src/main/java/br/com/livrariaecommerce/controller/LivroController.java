@@ -25,4 +25,10 @@ public class LivroController {
 		repository.save(livro);
 		return cadastroLivroMapping();
 	}
+
+	@RequestMapping("listaLivros")
+	public ModelAndView listaLivros() {
+		return new ModelAndView("livro/livro-listagem").addObject("livros", repository.selectAllLivros());
+	}
+
 }
