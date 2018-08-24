@@ -12,18 +12,37 @@
 			.card-deck .card {
 				margin-bottom: 30px !important;
 			}
+			.card-img-top {
+				padding: 30px;
+			}
 			.card-img-top img{
 				align-content: center;
+				padding: 30px;
+			}
+			.border-bottom-bg {
+				height: 55px;
+				background-color: #23272b;
+				margin-bottom: 55px;
+				color: white;
+				text-align: right;
+				line-height: 55px;
+			}
+			.border-bottom-bg i {
+				margin-right: 20px;
 			}
 		</style>
 	</head>
 	<body>
 		<c:import url="../include/menu.jsp" />
 		<c:import url="../include/bg.jsp" />
+		<div class="border-bottom-bg">
+			<i>Livres, connaissances, sagesse, information!</i>
+		</div>
 		<div class="container">
 			<div class="card-deck">
 				<c:forEach var="iten" items="${livros}">
-					<div class="card card-controll-layout" style="min-width: 340px; display: flex; flex-grow: 1; flex-wrap: wrap;">
+					<div class="card card-controll-layout" style="max-width:348px; min-width:340px; 
+						display: flex; flex-grow: 1; flex-wrap: wrap;">
 						<img class="card-img-top" src="${iten.urlImagemLivro}" width="200">
 					    <div class="card-body">
 					    	<h5 class="card-title">${iten.tituloDoLivro }</h5>
@@ -36,5 +55,6 @@
 				</c:forEach>
 			</div>
 		</div>
+		<c:import url="../include/footer.jsp" />
 	</body>
 </html>

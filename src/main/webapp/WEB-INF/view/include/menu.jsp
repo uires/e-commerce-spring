@@ -139,7 +139,7 @@
 		</ul>
 		<form class="form-inline my-2 my-lg-0" method="POST">
 			<input class="form-control mr-sm-2" type="search" placeholder="Buscar Livros" />
-			<button class="btn btn-primary btn-sm" type="submit">Buscar</button>
+			<button class="btn btn-dark btn-sm" type="submit">Buscar</button>
 		</form>
 	</div>
 </nav>
