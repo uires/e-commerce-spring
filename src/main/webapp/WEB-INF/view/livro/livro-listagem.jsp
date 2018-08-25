@@ -38,12 +38,13 @@
 		<div class="border-bottom-bg">
 			<i>Livres, connaissances, sagesse, information!</i>
 		</div>
+		<div class="container" style="color: green; text-align: center; border-bottom: 30px;"><h3>${sucess}</h3></div>
 		<div class="container">
 			<div class="card-deck">
 				<c:forEach var="iten" items="${livros}">
 					<div class="card card-controll-layout" style="max-width:348px; min-width:340px; 
 						display: flex; flex-grow: 1; flex-wrap: wrap;">
-						<img class="card-img-top" src="${iten.urlImagemLivro}" width="200">
+						<img class="card-img-top" src="${iten.urlImagemLivro}" width="300" height="300">
 					    <div class="card-body">
 					    	<h5 class="card-title">${iten.tituloDoLivro }</h5>
 					    	<p class="card-text lead">${iten.descricao}</p>
