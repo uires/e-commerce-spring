@@ -10,7 +10,6 @@
 			background-image: url("https://uploaddeimagens.com.br/images/001/574/538/original/rose-2101475_1920.jpg?1535048725");
 			background-repeat: no-repeat;
 			background-position: center;
-			margin-bottom: 55px;
 		}
 	</style>
 </head>
