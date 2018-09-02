@@ -5,9 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 	<link rel="shortcut icon" href="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNv
     	ZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgM
     	TYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKS
@@ -134,11 +132,11 @@
   	</a>
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item"><a class="nav-link" href='<c:url value="/listaLivros" />'>Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Livros</a></li>
+			<li class="nav-item"><a class="nav-link" href='<c:url value="/" />'>Home</a></li>
+			<li class="nav-item"><a class="nav-link" href='<c:url value="/livro/listaLivros" />'>Livros</a></li>
 		</ul>
-		<form class="form-inline my-2 my-lg-0" method="POST">
-			<input class="form-control mr-sm-2" type="search" placeholder="Buscar Livros" />
+		<form class="form-inline my-2 my-lg-0" method="POST" action="">
+			<input class="form-control mr-sm-2" type="search" placeholder="Buscar Livros" name="filtre" />
 			<button class="btn btn-dark btn-sm" type="submit">Buscar</button>
 		</form>
 	</div>
