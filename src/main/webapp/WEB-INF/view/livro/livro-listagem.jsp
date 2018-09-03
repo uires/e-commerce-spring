@@ -6,9 +6,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<meta charset="UTF-8" />
 		<title>Livraria Roseira - Livros </title>
 		<style type="text/css">
+			.controll-icon img{
+				float: right;
+			}
 			.card-deck .card {
 				margin-bottom: 30px !important;
 			}
@@ -30,6 +35,14 @@
 			.border-bottom-bg i {
 				margin-right: 20px;
 			}
+			
+			.card-img-top{
+				transition: transform .2s;
+			}
+			.card-img-top:hover {
+				transform: scale(1.6);
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -44,12 +57,18 @@
 				<c:forEach var="iten" items="${livros}">
 					<div class="card card-controll-layout" style="max-width:348px; min-width:340px; 
 						display: flex; flex-grow: 1; flex-wrap: wrap;">
-						<img class="card-img-top" src="${iten.urlImagemLivro}" width="300" height="300">
+						<img class="card-img-top" src="${iten.urlImagemLivro}" width="300" height="300" />
 					    <div class="card-body">
 					    	<h5 class="card-title">${iten.tituloDoLivro }</h5>
-					    	<p class="card-text lead">${iten.descricao}</p>
-					    	<div class="card-footer">
-					    		<p class="h4"><fmt:formatNumber value="${iten.preco}" type="currency" /></p>
+					    	<p class="card-text">${iten.descricao}<br /></p>
+					    	<div class="">
+						    	<p class="h4" style="width: 70%; float: left;">
+					    			<fmt:formatNumber value="${iten.preco}" type="currency" />
+					    		</p>
+								<form method="GET" action="<c:url value="/carrinho/adicionaCarrinho" />" style="float:right;">
+									<input type="hidden" value="${iten.id}" />
+									<button type="submit" class="btn btn-dark btn-sm">Carrinho</button>
+								</form>
 						    </div>
 					    </div>
 					</div>

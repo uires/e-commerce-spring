@@ -135,8 +135,8 @@
 			<li class="nav-item"><a class="nav-link" href='<c:url value="/" />'>Home</a></li>
 			<li class="nav-item"><a class="nav-link" href='<c:url value="/livro/listaLivros" />'>Livros</a></li>
 		</ul>
-		<form class="form-inline my-2 my-lg-0" method="POST" action="">
-			<input class="form-control mr-sm-2" type="search" placeholder="Buscar Livros" name="filtre" />
+		<form class="form-inline my-2 my-lg-0" method="GET" action="<c:url value="/livro/buscar" />">
+			<input class="form-control mr-sm-2" type="search" placeholder="Buscar Livros" name="filtre" required="required"/>
 			<button class="btn btn-dark btn-sm" type="submit">Buscar</button>
 		</form>
 	</div>
