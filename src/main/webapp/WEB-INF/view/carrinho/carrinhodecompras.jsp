@@ -9,14 +9,20 @@
 </head>
 	<body>
 		<c:import url="../include/menu.jsp" />
-		<c:import url="../include/.jsp" />
+		<c:if test="${not empty mensage}">
+			<div class="container" style="">
+				<div class="alert alert-warning">
+	  				${mensage}
+				</div>
+			</div>
+		</c:if>
 		<table>
 			<thead>
 			</thead>
 			<tbody>
 				<c:forEach var="iten" items="${produto}">
 					<tr>
-						<td>${iten.livro.nome}</td>
+						<td>${iten.tituloDoLivro}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
