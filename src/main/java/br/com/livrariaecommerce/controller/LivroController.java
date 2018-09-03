@@ -52,7 +52,7 @@ public class LivroController {
 			return new ModelAndView("livro/livro-listagem").addObject("livros", seachLivros);
 		} else {
 			atributters.addFlashAttribute("emptyResult", "Nenhum registro encontrado!");
-			return new ModelAndView("livro/livro-listagem");
+			return new ModelAndView("redirect:/livro/livro-listagem");
 		}
 	}
 }
