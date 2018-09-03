@@ -26,8 +26,7 @@ public class LivroDAO {
 	}
 	
 	public List<Livro> seachLivros(String filter) {
-		return manager.createQuery("from Livro livro WHERE livro.titulo LIKE %" + filter + "%" 
-				+ " ORDER BY livro.preco").getResultList();
+		return manager.createQuery("from Livro l WHERE l.tituloDoLivro LIKE '%"+ filter + "%'").getResultList();
 	}
 
 }
