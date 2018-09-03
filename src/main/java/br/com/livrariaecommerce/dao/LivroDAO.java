@@ -13,7 +13,7 @@ import br.com.livrariaecommerce.entity.Livro;
 @Repository
 @Transactional
 public class LivroDAO {
-	
+
 	@PersistenceContext
 	private EntityManager manager;
 
@@ -24,9 +24,12 @@ public class LivroDAO {
 	public List<Livro> selectAllLivros() {
 		return manager.createQuery("from Livro", Livro.class).getResultList();
 	}
-	
+
 	public List<Livro> seachLivros(String filter) {
-		return manager.createQuery("from Livro l WHERE l.tituloDoLivro LIKE '%"+ filter + "%'").getResultList();
+		return manager.createQuery("from Livro l WHERE l.tituloDoLivro LIKE '%" + filter + "%'").getResultList();
 	}
 
+	public Livro selectObjectById(Long id) {
+		return manager.find(Livro.class, id);
+	}
 }
