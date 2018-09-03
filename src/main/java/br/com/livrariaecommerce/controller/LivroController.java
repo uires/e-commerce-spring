@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -40,9 +41,11 @@ public class LivroController {
 	@RequestMapping("/listaLivros")
 	public ModelAndView listaLivros() {
 		System.out.println("mapping \"/lista-livros\"");
+		List<Livro> selectAllLivros = repository.selectAllLivros();
 		return new ModelAndView("livro/livro-listagem").addObject("livros", repository.selectAllLivros());
 	}
 
+	@RequestMapping(value = "/buscar", method = RequestMethod.GET)
 	public ModelAndView buscaLivro(@RequestParam("filtre") String filtro, RedirectAttributes atributters) {
 		List<Livro> seachLivros = repository.seachLivros(filtro);
 		if ((seachLivros != null) && seachLivros.size() > 0) {
