@@ -22,11 +22,10 @@ public class CarrinhoController {
 	@RequestMapping(value = "/carrinho-de-compras")
 	public ModelAndView carrinho() {
 		if (carrinho.getLivros().size() <= 0) {
-			System.out.println("Entrou no getLivros if");
 			return new ModelAndView("carrinho/carrinhodecompras").addObject("mensage",
 					"Você não tem nenhum produto no carrinho!");
 		}
-		return new ModelAndView("carrinho/carrinhodecompras").addObject("produto", carrinho.getLivros());
+		return new ModelAndView("carrinho/carrinhodecompras").addObject("produto", carrinho);
 
 	}
 

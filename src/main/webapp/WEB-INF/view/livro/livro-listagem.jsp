@@ -51,7 +51,11 @@
 		<div class="border-bottom-bg">
 			<i>Livres, connaissances, sagesse, information!</i>
 		</div>
-		<div class="container" style="color: green; text-align: center; border-bottom: 30px;"><h3>${sucess}</h3></div>
+		<c:if test="${not empty sucess}">
+			<div class="container alert alert-success" style="border-bottom: 30px;">
+				<h3>${sucess}</h3>
+			</div>
+		</c:if>
 		<div class="container">
 			<div class="card-deck">
 				<c:forEach var="iten" items="${livros}">
@@ -59,14 +63,14 @@
 						display: flex; flex-grow: 1; flex-wrap: wrap;">
 						<img class="card-img-top" src="${iten.urlImagemLivro}" width="300" height="300" />
 					    <div class="card-body">
-					    	<h5 class="card-title">${iten.tituloDoLivro }</h5>
+					    	<h5 class="card-title">${iten.tituloDoLivro}</h5>
 					    	<p class="card-text">${iten.descricao}<br /></p>
 					    	<div class="">
 						    	<p class="h4" style="width: 70%; float: left;">
 					    			<fmt:formatNumber value="${iten.preco}" type="currency" />
 					    		</p>
 								<form method="GET" action="<c:url value="/carrinho/adicionaCarrinho" />" style="float:right;">
-									<input type="hidden" value="${iten.id}" />
+									<input type="hidden" value="${iten.id}" name="id" />
 									<button type="submit" class="btn btn-dark btn-sm">Carrinho</button>
 								</form>
 						    </div>
