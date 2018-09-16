@@ -2,6 +2,8 @@ package br.com.livrariaecommerce.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BeanPropertyBindingResult;
@@ -28,11 +30,7 @@ public class LivroController {
 	}
 
 	@RequestMapping("cadastrarLivro")
-	public ModelAndView e(@ModelAttribute("livro") Livro livro, RedirectAttributes redirectAttributes,
-			BeanPropertyBindingResult beanPropertyBindingResult) {
-		if (beanPropertyBindingResult.hasErrors()) {
-			return new ModelAndView("livro/livro-formulario");
-		}
+	public ModelAndView e(@Valid @ModelAttribute("livro") Livro livro, RedirectAttributes redirectAttributes) {
 		repository.save(livro);
 		redirectAttributes.addFlashAttribute("sucess", "Livro cadastrado com sucesso!");
 		return new ModelAndView("redirect:/listaLivros");
