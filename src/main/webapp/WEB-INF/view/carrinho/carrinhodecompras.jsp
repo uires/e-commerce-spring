@@ -40,10 +40,11 @@
 				</div>
 			</c:forEach>
 		</div>
-		<div>
-			Total à pagar:
-			<fmt:formatNumber type="currency" value="${produto.valorTotal}" />
-			<button class="btn btn-primary">Pagar</button>
+		<div class="container" style="margin-bottom: 300px;">
+			<h1>
+				Total a pagar:
+				<fmt:formatNumber type="currency" value="${produto.valorTotal}" />
+			</h1><br />
 		</div>
 		<c:import url="../include/footer.jsp" />
 	</body>
